@@ -8,7 +8,7 @@ class Logs:
     def __init__(self):
 
         # Create a runtime directory for reports
-        directory = f"Report"
+        directory = f"Reports"
         try:
             os.mkdir(directory)
             print("Directory created successfully.")
@@ -23,7 +23,7 @@ class Logs:
         except FileExistsError:
             print("Directory already exists.")
 
-            # Create a runtime directory for reports in Reports
+        # Create a runtime directory for reports in Reports
         directory = f"Report {time.strftime('%Y-%m-%d %H%M%S')}"
         self.directory_path = f"Reports/{directory}"
         try:

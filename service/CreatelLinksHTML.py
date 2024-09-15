@@ -15,7 +15,7 @@ def create_links_html(ref_dict: dict, string, filepath, logs: Logs):
 
     html_code = (f"<!DOCTYPE html><html><head><title>Links HTML</title></head><body><p>Test Links:</p>"
                  f"{links_string}</body></html>")
-    with open(f"../Html Pages/{filepath}", "w") as html_file:
+    with open(f"Html Pages/{filepath}", "w") as html_file:
         html_file.write(html_code)
 
     send = {'html_code': html_code}

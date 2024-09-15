@@ -14,6 +14,12 @@ def run(self: Playwright) -> None:
     xlwb = ExcelWorkBook("excel\\Test.xlsx", None, None,
                          None, None)
 
+    query = input("Enter the amazon search query: ")
+
+    xlwb.change_sheet(xlwb.sheet_names.index("test amazon products"))
+    xlwb.enter_string_with_green_font(4, 7, query)
+    xlwb.save_workbook()
+
     # Create Logger object
     logger = Logs()
 
