@@ -1,48 +1,87 @@
-# Automation Test Suite
 
-## Introduction
+Amazon Web Scraping Automation Suite
+====================================
 
-This project is a one-stop solution for all automation needs, including web testing, web scraping, monitoring, and data population using simple commands. The suite is designed to be flexible and user-friendly, allowing automation to be managed through Excel sheets, even for users with minimal coding experience.
+This project provides a solution for web scraping and automation testing of Amazon product pages using Playwright and Excel for easy data management.
 
-[GitHub Repository](https://github.com/BoneyGupta/WebScrappingSuite)
+Author: Aaryaman Gupta
+Date: 15-Sep-2024
+GitHub Repository: https://github.com/BoneyGupta/Amazon-Webscraping
 
-## Features
+--------------------------------------
+Why Use This Automation Suite?
+--------------------------------------
 
-- **Easy Automation:** The suite allows users to automate complex tasks such as web testing and scraping using predefined Excel sheets.
-- **No Coding Required:** It simplifies test and flow management with minimal coding knowledge needed.
-- **Data Management:** Excel tables and predefined columns make it easy to visualize and maintain data continuity in lengthy automation scenarios.
-- **Flexible Logs:** Data is generated sequentially in logs and JSON files for easy reuse.
-- **Customizable Code:** The available source code can be altered using simple steps for different use cases.
-- **Minimal Coding Effort:** Features are being developed to further minimize coding requirements and maximize flexibility and functionality in Excel.
+- This project simplifies automation for web scraping, monitoring, and testing with minimal code.
+- The tool leverages Excel files for flow management and data visualization, making it accessible even for users without coding knowledge.
+- Data is generated in logs and JSON files for easy reuse.
+- The suite can handle both simple and complex automation scenarios with flexibility.
 
-## Why Use This Suite?
+--------------------------------------
+Building the Project:
+--------------------------------------
 
-- Supports simple to highly complex automation programs.
-- Includes features to add short code snippets directly into Excel.
-- Designed for users with minimal Python knowledge.
-- The entire automation is handled by the application, with easy-to-follow steps.
+1) Clone the repository to your desired directory:
+   ```
+   git clone git@github.com:BoneyGupta/Amazon-Webscraping.git
+   ```
 
-## Technology
+2) Install the required libraries:
 
-- **Playwright for Browser Automation:** Currently using Playwright, with future plans to support Selenium, API testing, and mobile testing (Appium).
-- **Future Enhancements:** Pytest and AI integrations are in development, with more features planned to enhance functionality and minimize coding.
+   Prerequisites:
+   - **Python 3.7 or later**: Check your Python version by running:
+     ```
+     python --version
+     ```
+   - **pip**: The Python package installer. Install it as per your operating system instructions:
+     - Windows: [Download get-pip.py](https://bootstrap.pypa.io/get-pip.py)
+     - macOS/Linux: Run the following command:
+       ```
+       python3 -m pip install --upgrade pip
+       ```
 
-## How to Get Started
+   Install required libraries:
+   ```
+   pip install playwright openpyxl
+   playwright install
+   ```
 
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/BoneyGupta/WebScrappingSuite.git
-    ```
-2. Install dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
-3. Follow the instructions in the `README.md` file to begin setting up your automation tasks.
+3) Add the Chrome Application folder to your directory (if CDP is required):
+   - Install Chrome Browser.
+   - Copy the folder `C:\Program Files\Google\Chrome\Application` and add it to your project directory.
+   - Open a command line terminal and run:
+     ```
+     chrome.exe --remote-debugging-port=9988 --user-data-dir=..\chromedata
+     ```
+   - Wait for the browser to open, then log in to the desired website.
 
-## Contribution
+4) Run the main program:
+   ```
+   python main.py
+   ```
 
-Feel free to contribute by forking the repository and submitting pull requests. New features are always welcome!
+5) Enter the query when prompted.
 
----
+6) View the reports in the `Reports` folder.
 
-Developed by **Aaryaman Gupta**, 8-Sep-2024.
+--------------------------------------
+Running a Test:
+--------------------------------------
+
+1) Open the `Test.xlsx` file in the project directory.
+2) Update the sheets with test cases. Refer to 'Template.xlsx' for examples.
+3) Make sure to name the test sheets with the prefix 'test'.
+4) Run the program to execute your test cases.
+
+--------------------------------------
+Features:
+--------------------------------------
+
+- Browser automation using Playwright (future plans for Selenium, API testing, and Appium).
+- Results include logs, sequential data, and reference data in JSON format.
+- Detailed test case structure for scraping product information from Amazon, including product title, rating, price, and features.
+
+--------------------------------------
+License:
+--------------------------------------
+This project is licensed under the MIT License.
